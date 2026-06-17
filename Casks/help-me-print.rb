@@ -1,6 +1,6 @@
 cask "help-me-print" do
-  version "0.1.6"
-  sha256 "ae39775a10f20ebcf6857c0c3c1e055a829c6cdb172972d7d29d559dda605038"
+  version "0.1.7"
+  sha256 "6015c2cb6d811d991304dbcb914662c097f00fa1beb860c777c25c7907292422"
 
   url ""
   name "Help Me Print"
