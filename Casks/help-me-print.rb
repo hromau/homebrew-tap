@@ -1,8 +1,8 @@
 cask "help-me-print" do
-  version "0.1.13"
-  sha256 "a9016847b093d84805f7702dda682ee71259f7a9bbb4bd9b6d4fa71cfce77897"
+  version "0.1.14"
+  sha256 "730fe0f1aa444b073e8b845207aabe523e59716be2912ba841b57d8ebf369fa9"
 
-  url "https://github.com/hromau/help-me-print/releases/download/v0.1.13/temp.dmg"
+  url "https://github.com/hromau/help-me-print/releases/download/v0.1.14/temp.dmg"
   name "Help Me Print"
   desc "Manual duplex printing for printers without automatic double-sided support"
   homepage "https://github.com/hromau/help-me-print"
