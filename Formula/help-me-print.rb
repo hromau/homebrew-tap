@@ -1,9 +1,9 @@
 class HelpMePrint < Formula
   desc "Manual duplex printing for printers without automatic double-sided support"
   homepage "https://github.com/hromau/help-me-print"
-  url "https://github.com/hromau/help-me-print/archive/refs/tags/v0.1.16.tar.gz"
-  sha256 "17096c95e5c09f6c42bbdad75a53fbca16a2b927bea43f27590116c02c752cbc"
-  version "0.1.16"
+  url "https://github.com/hromau/help-me-print/archive/refs/tags/v0.1.17.tar.gz"
+  sha256 "62fdb0717cfe5caaddb030b69f45bbd64edf1c2009b4998ab3d31c5675731d57"
+  version "0.1.17"
 
   depends_on "cmake" => :build
   depends_on "qt"
