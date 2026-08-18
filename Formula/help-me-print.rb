@@ -2,8 +2,8 @@ class HelpMePrint < Formula
   desc "Manual duplex printing for printers without automatic double-sided support"
   homepage "https://github.com/hromau/help-me-print"
   # The version is scanned from the release tag in the URL.
-  url "https://github.com/hromau/help-me-print-apt/releases/download/v0.1.22/help-me-print-macos.tar.gz"
-  sha256 "2460795759b208c7a352097edc727caaed755c64c62567ba36981beed02ce383"
+  url "https://github.com/hromau/help-me-print-apt/releases/download/v0.1.23/help-me-print-macos.tar.gz"
+  sha256 "0a4b561ade145f2ff7e7d5e2ae5514a98ed30bc12b64ccd5afec71ba96c37138"
 
   # The source repository is private, so this formula installs the prebuilt
   # application bundle produced by CI instead of compiling from source. The
