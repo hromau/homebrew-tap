@@ -1,25 +1,17 @@
 class HelpMePrint < Formula
   desc "Manual duplex printing for printers without automatic double-sided support"
   homepage "https://github.com/hromau/help-me-print"
-  url "https://github.com/hromau/help-me-print/archive/refs/tags/v0.1.20.tar.gz"
-  sha256 "7e0d5de8a931284854fe532c0e61e21ac7ff20ce6e637a9d51fc1850bed138e0"
-  version "0.1.20"
+  # The version is scanned from the release tag in the URL.
+  url "https://github.com/hromau/help-me-print-apt/releases/download/v0.1.22/help-me-print-macos.tar.gz"
+  sha256 "2460795759b208c7a352097edc727caaed755c64c62567ba36981beed02ce383"
 
-  depends_on "cmake" => :build
-  depends_on "qt"
+  # The source repository is private, so this formula installs the prebuilt
+  # application bundle produced by CI instead of compiling from source. The
+  # bundle already carries Qt inside it, so there is nothing to depend on.
+  depends_on :macos
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DCMAKE_BUILD_TYPE=Release",
-                    "-DCMAKE_PREFIX_PATH=#{Formula["qt"].opt_prefix}",
-                    "-DDUPLEXPRINT_BUILD_TESTS=OFF",
-                    "-DDUPLEXPRINT_DEPLOY_QT_RUNTIME=OFF",
-                    "-DDUPLEXPRINT_REQUIRE_QT_APP=ON",
-                    "-DDUPLEXPRINT_VERSION=#{version}",
-                    *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
-
+    prefix.install "help-me-print.app"
     bin.write_exec_script prefix/"help-me-print.app/Contents/MacOS/help-me-print"
   end
 
@@ -37,6 +29,6 @@ class HelpMePrint < Formula
   end
 
   test do
-    assert_predicate prefix/"help-me-print.app/Contents/MacOS/help-me-print", :exist?
+    assert_path_exists prefix/"help-me-print.app/Contents/MacOS/help-me-print"
   end
 end
